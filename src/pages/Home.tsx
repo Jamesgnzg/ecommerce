@@ -14,7 +14,7 @@ const Home: React.FC = (): ReactElement => {
   const featuredProducts: IProduct[] = productList.filter(
     (product) => product.lane == "features"
   );
-  const nullProducts: IProduct[] = productList.filter(
+  const otherProducts: IProduct[] = productList.filter(
     (product) => product.lane == null
   );
   return (
@@ -23,7 +23,7 @@ const Home: React.FC = (): ReactElement => {
         <ProductCarousel title="For you" productList={userProducts} />
         <ProductCarousel title="Hot Products" productList={hotProducts} />
         <ProductCarousel title="Featured" productList={featuredProducts} />
-        <ProductCarousel productList={nullProducts} />
+        <ProductCarousel title="Other Products" productList={otherProducts} />
       </div>
     </>
   );

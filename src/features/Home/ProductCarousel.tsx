@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, memo } from "react";
 import { IProduct } from "../../interface/Products";
 import ProductCard from "./ProductCard";
 
@@ -85,4 +85,4 @@ const ProductCarousel: React.FC<ICarouselProps> = ({
   );
 };
 
-export default ProductCarousel;
+export default memo(ProductCarousel);
